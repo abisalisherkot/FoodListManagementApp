@@ -5,7 +5,7 @@ export default function UserScreen() {
     return (
         <View>
 
-            <Text> User Screen</Text>
+            <Text> User Profile Screen</Text>
         </View>
     )
 }

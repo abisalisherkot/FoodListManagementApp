@@ -1,39 +1,17 @@
 // types.ts
 
 import { NativeStackNavigationProp, NativeStackScreenProps } from "react-native-screens/lib/typescript/native-stack/types";
-import { UserStatus, UserType } from "./enum";
-
-export interface User {
-    firstName?: string;
-    lastName?: string;
-    email?: string;
-    phoneNumber?: string;
-    password?: string;
-    gender?: string;
-    dateOfBirth?: Date;
-    status?: UserStatus;
-    userType?: UserType;
-    address1?: string;
-    address2?: string;
-    city?: string;
-    state?: string;
-    zip?: string;
-    country?: string;
-    salutation?: string;
-    age?: number;
-}
 
 
 
 
-export interface UserCardProps {
-    user: User;
-    onDelete: () => void;
-}
+
+
+
 export type RootStackParamList = {
     HomeTabs: undefined;
-    Detail: { user: User }
-    User: undefined;
+    UpdateFoodList: { FoodList: FoodListDto }
+   
     Add: undefined;
 };
 export type HomeTabsParamList = {
@@ -41,4 +19,28 @@ export type HomeTabsParamList = {
     User: undefined;
     Add: undefined;
 };
-export type HomeScreenNavigationProp = NativeStackNavigationProp<RootStackParamList, 'HomeTabs' | 'Detail' | 'Add' | "User">;
+export type HomeScreenNavigationProp = NativeStackNavigationProp<RootStackParamList, 'HomeTabs' | 'UpdateFoodList' | 'Add' >;
+
+
+export type AddFoodListDto={
+    ListName?: string;
+    ListCode?: string;
+  ListValue?: string;
+  Description?: string;
+  DateAdded?: Date;
+  DateUpdated?: Date;
+  UpdatedBy?: string;
+  AddedBy?: string;
+}
+export type FoodListDto={
+
+    addedBy: string;
+    dateAdded: string;
+    dateUpdated: string;
+    description: string;
+    listCode: string;
+    listID: number;
+    listName: string;
+    listValue: string;
+    updatedBy: string;
+}

@@ -1,3 +1,3 @@
 
-const baseUrl = `10.120.172.124`;
-export const BaseUrl = `${baseUrl}:7071`
+const baseUrl = `http://192.168.173.230:7269/api/`;
+export const BaseUrl = baseUrl

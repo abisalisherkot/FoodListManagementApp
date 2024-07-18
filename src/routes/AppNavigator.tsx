@@ -3,8 +3,9 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import HomeTabs from './MainStack';
-import DetailScreen from '../screens/userScreen/DetailScreen';
-import { RootStackParamList, User } from '../common/types';
+import DetailScreen from '../screens/FoodListScreen/UpdateFoodListScreen';
+import { AddFoodListDto, FoodListDto, RootStackParamList } from '../common/types';
+import UpdateFoodListScreen from '../screens/FoodListScreen/UpdateFoodListScreen';
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -17,7 +18,7 @@ const AppNavigator: React.FC = () => {
                     component={HomeTabs}
                     options={{ headerShown: false }}
                 />
-                <Stack.Screen name="Detail" component={DetailScreen} initialParams={{ user: {} as User }} />
+                <Stack.Screen name="UpdateFoodList" component={UpdateFoodListScreen} initialParams={{ FoodList: {} as FoodListDto }} />
             </Stack.Navigator>
         </NavigationContainer>
     );

@@ -2,11 +2,11 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
-import HomeScreen from '../screens/userScreen/HomeScreen';
-import UserScreen from '../screens/userScreen/UserScreen';
-import AddScreen from '../screens/userScreen/AddScreen';
+import HomeScreen from '../screens/FoodListScreen/HomeScreen';
+import UserScreen from '../screens/FoodListScreen/UserScreen';
+import AddScreen from '../screens/FoodListScreen/AddScreen';
 import { HomeTabsParamList } from '../common/types';
-import AddUserScreen from '../screens/userScreen/AddScreen';
+import AddUserScreen from '../screens/FoodListScreen/AddScreen';
 
 const Tab = createBottomTabNavigator<HomeTabsParamList>();
 
@@ -29,7 +29,7 @@ const HomeTabs: React.FC = () => {
                 },
             })}
         >
-            <Tab.Screen name="Home" component={HomeScreen} />
+            <Tab.Screen name="Home" component={HomeScreen}  />
             <Tab.Screen name="User" component={UserScreen} />
             <Tab.Screen name="Add" component={AddUserScreen} />
         </Tab.Navigator>
